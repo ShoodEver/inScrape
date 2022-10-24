@@ -25,9 +25,7 @@ namespace ScraperAndChecker
             sources.AddRange(new string[] {
                 "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt",
                 "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/https.txt",
-                "https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt",
-                "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
-                "https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt"
+                "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt"
 
             });
         }
@@ -68,7 +66,7 @@ namespace ScraperAndChecker
                 }
             }
             
-            rTxtProxies.Text = Regex.Unescape(rTxtProxies.Text); //unify lines separators (\n \r \r\n)
+            rTxtProxies.Text = Regex.Unescape(rTxtProxies.Text); //lines separators (\n \r \r\n)
 
             rTxtProxies.Text = string.Join(Environment.NewLine, rTxtProxies.Lines.Distinct()); //remove duplicated
                                
